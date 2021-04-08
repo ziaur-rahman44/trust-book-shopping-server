@@ -19,6 +19,10 @@ client.connect(err => {
   const ordersCollection = client.db("trustShop").collection("orders");
 
  
+app.get('/',(req,res)=>{
+    res.send('its working')
+})
+
  app.get('/books',(req, res)=>{
      bookCollection.find({})
      .toArray((err, documents)=>{
